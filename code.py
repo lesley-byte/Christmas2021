@@ -24,7 +24,7 @@ cc = ConsumerControl(usb_hid.devices)
 
 # list of pins to use (always skipping GP15 on Pico because it's funky)
 pins = [
-    board.GP0,
+    board.GP0, # This should look familiar. Its on the board...to make it easier to alter.
     board.GP1,
     board.GP4,
     board.GP5,
@@ -50,8 +50,8 @@ keymap = {
 
     (7): (KEY, [Keycode.R]),
     (8): (KEY, [Keycode.G]),
-    (9): (KEY, [Keycode.B]),
-    # (10): (KEY, [Keycode.UP_ARROW])  -----I have left these things as comments/examples because the keyboard I gave you only has 10 keys----
+    (9): (KEY, [Keycode.B])
+    # (10): (KEY, [Keycode.UP_ARROW]),  -----I have left these things as comments/examples because the keyboard I gave you only has 10 keys----
     # (11): (KEY, [Keycode.X]),      
     # (12): (KEY, [Keycode.Y]),
     # (13): (KEY, [Keycode.Z]),
@@ -73,10 +73,10 @@ for i in range(10):
     switches[i].direction = Direction.INPUT
     switches[i].pull = Pull.UP
 
-switch_state = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+switch_state = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 while True:
-    for button in range(21):
+    for button in range(10):
         if switch_state[button] == 0:
             if not switches[button].value:
                 try:
