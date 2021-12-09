@@ -17,7 +17,7 @@ Your kit should include:
 The Raspberry Pi Pico *needs* firmware.  I gave you a fresh one. This is an adventure. *Buckle up!* The example code here uses CircuitPython but if you want to you can use something else.
 its up to you.
 
-1. Familiarize yourself with the Pico.  There's a great introduction on the adafruit website at: https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython  ![image](https://user-images.githubusercontent.com/60296103/145459981-657b252b-b5eb-4d8b-9abd-a66ccf57ada2.png)
+1. Familiarize yourself with the Pico.  There's a great introduction on the adafruit website at: https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython  ![image](https://user-images.githubusercontent.com/60296103/145462037-aeacaa23-bd2e-4a99-81da-0be189f1a5a9.png)
 
 2. Follow the instructions for setting up the Pico macropad here: https://learn.adafruit.com/diy-pico-mechanical-keyboard-with-fritzing-circuitpython/overview 
 ![image](https://user-images.githubusercontent.com/60296103/145460446-f6251766-12cc-4575-ab9b-556eb37764c9.png)
