@@ -14,7 +14,7 @@ Your kit should include:
 # *Start*
 
 
-The Raspberry Pi Pico needs firmware.  I gave you a fresh one. This is an adventure. *Buckle up!* The example code here uses CircuitPython but if you want to you can use something else.
+The Raspberry Pi Pico *needs* firmware.  I gave you a fresh one. This is an adventure. *Buckle up!* The example code here uses CircuitPython but if you want to you can use something else.
 its up to you.
 
 1. Familiarize yourself with the Pico.  There's a great introduction on the adafruit website at: https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython  
@@ -23,6 +23,7 @@ its up to you.
 - Follow the instructions to put the circuitpython on the pico https://learn.adafruit.com/diy-pico-mechanical-keyboard-with-fritzing-circuitpython/installing-circuitpython
 - Download the Adafruit Hid library https://circuitpython.org/libraries  (you want the Bundle for Version 7.x)
 - Install Mu or use python IDE of your choice to your computer.  https://codewith.mu/
+
 4. Go to the page in this repository for the code.  You can cut and paste it into the editor or you can mess with it and change it as you see fit.  Its yours.  
     https://github.com/lesley-byte/Christmas2021/blob/a56719320f9c8117c5a0f90006cdf598d7aba63f/code.py
     - Copy the code.py file and paste it into Mu or your editor of choice. Then, save it to your Pico as code.py.
@@ -34,6 +35,7 @@ its up to you.
   - Eject/detach Pico from your computer.
   - Plug Pico into Christmas keyboard.
   - Plug assembled Christmas keyboard into  your computer.  It will pop up as a usb drive.  There is a way around this with code if it becomes annoying.  Its just easier to change the code if it acts like a usb drive.  Close the popped up folder and use it like a keyboard, macropad, whatever you want.
+
  6. Play!!
 
 # Ask me if you need help.  
