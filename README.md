@@ -33,4 +33,4 @@ its up to you.
 
 # Ask me if you need help.  
 
-I will actually set if up for you if you want but am offering it as an adventure first.  And this way you can do this with any pico... and even on a breadboard with different button layouts.
+I will actually set it up for you if you want but am offering it as an adventure first.  And this way you can learn to do this with any pico... and even on a breadboard with different button layouts.
