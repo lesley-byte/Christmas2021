@@ -35,6 +35,8 @@ but stop at the code page.  And don't worry about 3d printing.  We aren't doing 
 
 
 - Install Mu or use python IDE of your choice to your computer.  https://codewith.mu/
+![image](https://user-images.githubusercontent.com/60296103/145462879-61b292b5-6fe5-4dc0-83e8-bd16f9c59245.png)
+
 
 4. Go to the page in this repository for the code.  You can cut and paste it into the editor or you can mess with it and change it as you see fit.  Its yours.  
     https://github.com/lesley-byte/Christmas2021/blob/a56719320f9c8117c5a0f90006cdf598d7aba63f/code.py
