@@ -14,8 +14,9 @@ Your kit should include:
 # *Start*
 
 
-The Raspberry Pi Pico *needs* firmware.  I gave you a fresh one. This is an adventure. *Buckle up!* The example code here uses CircuitPython but if you want to you can use something else.
-its up to you.
+The Raspberry Pi Pico has firmware.  I gave you a fresh one with some example code. This is an adventure. *Buckle up!* The example code uses CircuitPython but if you want to you can use something else.  Its up to you.  Alternatively, i will give you a raw pico without firmware at your request.
+
+# Should you desire to program a raw pico with firmware and code the following instructions may help:
 
 1. Familiarize yourself with the Pico.  There's a great introduction on the adafruit website at: https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython  ![image](https://user-images.githubusercontent.com/60296103/145462037-aeacaa23-bd2e-4a99-81da-0be189f1a5a9.png)
 
