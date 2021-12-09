@@ -1,5 +1,5 @@
 # Christmas 2021 Keyboard
-If you know, then you know. :Christmas Tree:
+If you know, then you know. 🎄
 
 Your kit should include:
 1. "Merry Christmas here's a keyboard" green pcb. (See images below)
