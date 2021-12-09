@@ -1,10 +1,12 @@
- Shout out to Adafruit!!! This is really their code badly mashed up.   Anyway...small hint:
+ Note: Punctuation and capitalization matters!!!  keycode.A is not the same as Keycode.A.  Leaving out a comma or a period or a parenthesis can make the code.py not run at all.
+ 
+ Shout out to Adafruit!!!    Anyway...small hint:
  If you enter the repl and type:
  >>> from adafruit_hid.keycode import Keycode
  >>> print(dir(Keycode))
  
- 
  then you will get the list of possible keycodes.  This can be helpful in certain circumstances. Here is a copy of that list as of 11/2/21:
+ 
  ['__class__', '__module__', '__name__', '__qualname__', '__bases__', '__dict__', 'C', 'M', 'A',
  'B', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V',
  'W', 'X', 'Y', 'Z', 'ONE', 'TWO', 'THREE', 'FOUR', 'FIVE', 'SIX', 'SEVEN', 'EIGHT', 'NINE',
