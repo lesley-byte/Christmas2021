@@ -28,7 +28,7 @@ its up to you.
   - Make sure your code is saved.
   - Eject/detach Pico from your computer.
   - Plug Pico into Christmas keyboard.
-  - Plug assembled Christmas keyboard into  your computer.  It will pop up as a usb drive.  There is a way around this with code if it becomes annoying.  Its just easier to change    the code if it acts like a usb drive.  Close the popped up folder and use it like a keyboard, macropad, whatever you want.
-
+  - Plug assembled Christmas keyboard into  your computer.  It will pop up as a usb drive.  There is a way around this with code if it becomes annoying.  Its just easier to change    the code if it acts like a usb drive.  Close the popped up folder and use it like a keyboard, macropad, whatever you want.\
+ 6. Play!!
 
 
