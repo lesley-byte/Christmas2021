@@ -25,7 +25,7 @@ its up to you.
     - Install Mu or use python IDE of your choice.
 4. Go to the page in this repository for the code.  You can cut and paste it into the editor or you can mess with it and change it as you see fit.  Its yours.  
     https://github.com/lesley-byte/Christmas2021/blob/a56719320f9c8117c5a0f90006cdf598d7aba63f/code.py
-    a. Copy the code.py file and paste it into Mu. Then, save it to your Pico as code.py.
+    - Copy the code.py file and paste it into Mu or your editor of choice. Then, save it to your Pico as code.py.
     
     ### *Note:* The code must be saved in a file called:  code.py
     
