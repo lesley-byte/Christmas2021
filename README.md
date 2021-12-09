@@ -11,7 +11,7 @@ Your kit should include:
 ![image](https://user-images.githubusercontent.com/60296103/145315960-891df17c-c62c-4927-922e-38e7cc167c39.png)
 
 
-## **Start**
+# *Start*
 
 
 The Raspberry Pi Pico needs firmware.  I gave you a fresh one. This is an adventure. *Buckle up!* The example code here uses CircuitPython but if you want to you can use something else.
@@ -22,7 +22,7 @@ its up to you.
 3. Go to the page in this repository for the code.  You can cut and paste it into the editor or you can mess with it and change it as you see fit.  Its yours.  
     https://github.com/lesley-byte/Christmas2021/blob/a56719320f9c8117c5a0f90006cdf598d7aba63f/code.py
     
-    # *Note:* The code must be saved in a file called:  code.py
+    ### *Note:* The code must be saved in a file called:  code.py
     
 5. Keyboard assembly:
   - Make sure your code is saved.
