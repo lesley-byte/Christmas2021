@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MIT
 # RaspberryPi Pico RP2040 Mechanical Keyboard
 
-#Altered by lesley-byte for the people who have the kit.
+#Altered by lesley-byte for the people who have the "Merry Christmas here's a keyboard" kit.
 
 import time
 import board
