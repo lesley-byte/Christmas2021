@@ -12,6 +12,7 @@ from adafruit_hid.keyboard import Keyboard
 from adafruit_hid.keycode import Keycode
 from adafruit_hid.consumer_control import ConsumerControl
 from adafruit_hid.consumer_control_code import ConsumerControlCode
+from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
 
 print("---Pico Pad Christmas 2021 Keyboard---")
 
@@ -19,8 +20,12 @@ led = DigitalInOut(board.LED)
 led.direction = Direction.OUTPUT
 led.value = True
 
+keyboard = Keyboard(usb_hid.devices)
 kbd = Keyboard(usb_hid.devices)
 cc = ConsumerControl(usb_hid.devices)
+kbd_layout = KeyboardLayoutUS(keyboard)
+kbd_layout = KeyboardLayoutUS(keyboard)
+keyboard_layout = KeyboardLayoutUS(keyboard)
 
 # list of pins to use (always skipping GP15 on Pico because it's funky)
 pins = [
@@ -38,19 +43,27 @@ pins = [
 
 MEDIA = 1
 KEY = 2
+KEYWRITE = 3
 
 keymap = {
-    (0): (KEY, (Keycode.GUI, Keycode.C)),  # This thing always starts with number 0...not number 1.  Ask dad if you need to know why.
-    (1): (KEY, (Keycode.GUI, Keycode.V)),
+    (0): (KEYWRITE, "Hello World.  You just hit the first button"),  # This thing always starts with number 0...not number 1.  Ask dad if you need to know why.
+    (1): (KEY, [Keycode.TWO]),
     (2): (KEY, [Keycode.THREE]),
-    (3): (KEY, [Keycode.FOUR]),
+    (3): (KEY, [Keycode.A]),
     (4): (KEY, [Keycode.FIVE]),
     (5): (MEDIA, ConsumerControlCode.VOLUME_DECREMENT),
     (6): (MEDIA, ConsumerControlCode.VOLUME_INCREMENT),
 
     (7): (KEY, [Keycode.R]),
-    (8): (KEY, [Keycode.G]),
-    (9): (KEY, [Keycode.B])
+    (8): (KEY, (Keycode.GUI, Keycode.R)),
+    (9): (KEYWRITE, """ If you use three quotation marks in a row, then you can keep the formating.
+    Neat trick, Right?
+    ^-^
+    @ @
+     O 
+     
+    Remember that punctuation in your code is important.  eeek!
+    """)
     # (10): (KEY, [Keycode.UP_ARROW]),  -----I have left these things as comments/examples because the keyboard I gave you only has 10 keys----
     # (11): (KEY, [Keycode.X]),      
     # (12): (KEY, [Keycode.Y]),
@@ -82,8 +95,13 @@ while True:
                 try:
                     if keymap[button][0] == KEY:
                         kbd.press(*keymap[button][1])
+                        print("activity one")
+                    elif keymap[button][0] == KEYWRITE:
+                        kbd_layout.write(keymap[button][1])
+                        print("activity three")
                     else:
                         cc.send(keymap[button][1])
+                        print("activity two")
                 except ValueError:  # deals w six key limit
                     pass
                 switch_state[button] = 1
