@@ -45,17 +45,18 @@ MEDIA = 1
 KEY = 2
 KEYWRITE = 3
 
-keymap = {
-    (0): (KEYWRITE, "Hello World.  You just hit the first button"),  # This thing always starts with number 0...not number 1.  Ask dad if you need to know why.
-    (1): (KEY, [Keycode.TWO]),
-    (2): (KEY, [Keycode.THREE]),
-    (3): (KEY, [Keycode.A]),
-    (4): (KEY, [Keycode.FIVE]),
-    (5): (MEDIA, ConsumerControlCode.VOLUME_DECREMENT),
-    (6): (MEDIA, ConsumerControlCode.VOLUME_INCREMENT),
 
-    (7): (KEY, [Keycode.R]),
-    (8): (KEY, (Keycode.GUI, Keycode.R)),
+keymap = {
+    (0): (KEY, (Keycode.GUI, Keycode.R)),  # This thing always starts with number 0...not number 1.  Ask dad if you need to know why.
+    (1): (KEYWRITE, "Notepad"),
+    (2): (KEY, [Keycode.ENTER]),
+    (3): (KEY, [Keycode.FOUR]),
+    (4): (KEY, [Keycode.FIVE]),
+    (5): (KEY, [Keycode.A]),
+    (6): (KEY, [Keycode.B]),
+
+    (7): (MEDIA, ConsumerControlCode.VOLUME_DECREMENT),
+    (8): (MEDIA, ConsumerControlCode.VOLUME_INCREMENT),
     (9): (KEYWRITE, """ If you use three quotation marks in a row, then you can keep the formating.
     Neat trick, Right?
     ^-^
@@ -87,6 +88,7 @@ for i in range(10):
     switches[i].pull = Pull.UP
 
 switch_state = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
 
 while True:
     for button in range(10):
