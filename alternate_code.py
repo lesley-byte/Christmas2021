@@ -89,8 +89,7 @@ while True:
 
         if not buttons[button].value and buttons_state[button]:
             print("Button released.")
-            print(pins[i])
-            
+            print(pins[button])
             
             if isinstance(key_output, (list, tuple)) and isinstance(key_output[0], dict):
                 for k in key_output:
