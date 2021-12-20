@@ -9,8 +9,8 @@ from adafruit_hid.keycode import Keycode
 from adafruit_hid.consumer_control import ConsumerControl
 from adafruit_hid.consumer_control_code import ConsumerControlCode
 from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
-print("Christmas pico keyboard")
 
+print("Christmas pico keyboard")
 led = DigitalInOut(board.LED)
 led.direction = Direction.OUTPUT
 led.value = True
@@ -36,11 +36,11 @@ for i in range(10):
     buttons[i].direction = Direction.INPUT
     buttons[i].pull = Pull.UP    
 buttons_state = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-keeby = 0
-f1 = open("/macros/button_GP0.txt", "rt")
-print(f1.read())
+
+# -----------------------------------------------------------------------------------------------
+
 # print a string on keypress
-key_output1 = "Hello World!\n"
+key_output1 = "Hello World! \n"
 # one character on keypress
 key_output2 = Keycode.A
 # multiple simultaneous keypresses
@@ -59,6 +59,8 @@ key_output5 = (
    {'keys': Keycode.F, 'delay': 0.1},  # open font submenu
    {'keys': "\t\t100\n", 'delay': 0.1},  # tab over to font size, enter 100
 )
+
+# -----------------------------------------------------------------------------------------------
 key_output = key_output1
 # our helper function will press the keys themselves
 def make_keystrokes(keys, delay):
