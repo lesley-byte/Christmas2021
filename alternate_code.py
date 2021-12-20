@@ -45,19 +45,19 @@ buttons_state = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 #button_state = False
 # print a string on keypress
-key_output = "Hello World!\n"
+key_output1 = "Hello World!\n"
 # one character on keypress
-# key_output = Keycode.A
+key_output2 = Keycode.A
 # multiple simultaneous keypresses
-# key_output = (Keycode.SHIFT, Keycode.A)  # capital A
-# key_output = (Keycode.CONTROL, Keycode.ALT, Keycode.DELETE) # three finger salute!
+key_output3 = (Keycode.SHIFT, Keycode.A)  # capital A
+key_output4 = (Keycode.CONTROL, Keycode.ALT, Keycode.DELETE) # three finger salute!
 # complex commands! we make a list of dictionary entries for each command
 # each line has 'keys' which is either a single key, a list of keys, or a string
 # then the 'delay' is in seconds, since we often need to give the computer a minute
 # before doing something!
 # this will open up a notepad in windows, and ducky the user
-"""
-key_output = (
+
+key_output5 = (
    {'keys': Keycode.GUI, 'delay': 0.1},
    {'keys': "notepad\n", 'delay': 1},  # give it a moment to launch!
    {'keys': "YOU HAVE BEEN DUCKIED!", 'delay': 0.1},
@@ -65,8 +65,8 @@ key_output = (
    {'keys': Keycode.F, 'delay': 0.1}, # open font submenu
    {'keys': "\t\t100\n", 'delay': 0.1}, # tab over to font size, enter 100
 )
-"""
 
+key_output = key_output1
 
 # our helper function will press the keys themselves
 def make_keystrokes(keys, delay):
@@ -90,6 +90,12 @@ while True:
         if not buttons[button].value and buttons_state[button]:
             print("Button released.")
             print(pins[button])
+            if pins[button] == board.GP0:
+                key_output = key_output1
+                pass
+            else:
+                key_output = key_output2
+                pass
             
             if isinstance(key_output, (list, tuple)) and isinstance(key_output[0], dict):
                 for k in key_output:
