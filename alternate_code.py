@@ -93,10 +93,15 @@ while True:
             if pins[button] == board.GP0:
                 key_output = key_output1
                 pass
-            else:
+            elif pins[button] == board.GP1:
                 key_output = key_output2
                 pass
-            
+            elif pins[button] == board.GP4:
+                key_output = key_output3
+                pass
+            elif pins[button] == board.GP5:
+                key_output = key_output5
+                pass
             if isinstance(key_output, (list, tuple)) and isinstance(key_output[0], dict):
                 for k in key_output:
                     make_keystrokes(k['keys'], k['delay'])
