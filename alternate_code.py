@@ -1,5 +1,5 @@
-#Altered by lesley-byte for the people who have the "Merry Christmas here's a keyboard" kit.  Do not attempt to use this code at this time.  Incomplete.
-
+# Altered by lesley-byte for the people who have the "Merry Christmas here's a keyboard" kit.  Do not attempt to use this code at this time.  Incomplete.
+import os
 import time
 import board
 from digitalio import DigitalInOut, Direction, Pull
@@ -19,7 +19,7 @@ keyboard = Keyboard(usb_hid.devices)
 keyboard_layout = KeyboardLayoutUS(keyboard)  # We're in the US :)
 # create the switch, add a pullup, start it with not being pressed
 pins = [
-    board.GP0, # This should look familiar. Its on the board...to make it easier to alter.
+    board.GP0,  # This should look familiar. Its on the board...to make it easier to alter.
     board.GP1,
     board.GP4,
     board.GP5,
@@ -39,35 +39,36 @@ for i in range(10):
     buttons[i].pull = Pull.UP
     
 buttons_state = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-#button = DigitalInOut(board.GP0)
-#button.switch_to_input(pull=Pull.UP)
+# button = DigitalInOut(board.GP0)
+# button.switch_to_input(pull=Pull.UP)
+keeby = 0
 
-
-#button_state = False
+f1 = open("/macros/button_GP0.txt", "rt")
+print(f1.read())
+keeby = (f1.read())
+print(keeby)
 # print a string on keypress
-key_output1 = "Hello World!\n"
+key_output1 = keeby # "Hello World!\n"
 # one character on keypress
 key_output2 = Keycode.A
 # multiple simultaneous keypresses
 key_output3 = (Keycode.SHIFT, Keycode.A)  # capital A
-key_output4 = (Keycode.CONTROL, Keycode.ALT, Keycode.DELETE) # three finger salute!
+key_output4 = (Keycode.CONTROL, Keycode.ALT, Keycode.DELETE)  # three finger salute!
 # complex commands! we make a list of dictionary entries for each command
 # each line has 'keys' which is either a single key, a list of keys, or a string
 # then the 'delay' is in seconds, since we often need to give the computer a minute
 # before doing something!
 # this will open up a notepad in windows, and ducky the user
-
 key_output5 = (
    {'keys': Keycode.GUI, 'delay': 0.1},
    {'keys': "notepad\n", 'delay': 1},  # give it a moment to launch!
    {'keys': "YOU HAVE BEEN DUCKIED!", 'delay': 0.1},
-   {'keys': (Keycode.ALT, Keycode.O), 'delay': 0.1}, # open format menu
-   {'keys': Keycode.F, 'delay': 0.1}, # open font submenu
-   {'keys': "\t\t100\n", 'delay': 0.1}, # tab over to font size, enter 100
+   {'keys': (Keycode.ALT, Keycode.O), 'delay': 0.1},  # open format menu
+   {'keys': Keycode.F, 'delay': 0.1},  # open font submenu
+   {'keys': "\t\t100\n", 'delay': 0.1},  # tab over to font size, enter 100
 )
 
 key_output = key_output1
-
 # our helper function will press the keys themselves
 def make_keystrokes(keys, delay):
     if isinstance(keys, str):  # If it's a string...
@@ -80,18 +81,19 @@ def make_keystrokes(keys, delay):
         keyboard.release_all()  # ..."Release"!
     time.sleep(delay)
 
-
 while True:
     for button in range(10):
         if buttons[button].value and not buttons_state[button]:
-            #print("Button pressed.")
+            # print("Button pressed.")
             buttons_state[button] = True
 
         if not buttons[button].value and buttons_state[button]:
             print("Button released.")
             print(pins[button])
             if pins[button] == board.GP0:
+                
                 key_output = key_output1
+                
                 pass
             elif pins[button] == board.GP1:
                 key_output = key_output2
@@ -102,6 +104,7 @@ while True:
             elif pins[button] == board.GP5:
                 key_output = key_output5
                 pass
+            
             if isinstance(key_output, (list, tuple)) and isinstance(key_output[0], dict):
                 for k in key_output:
                     make_keystrokes(k['keys'], k['delay'])
