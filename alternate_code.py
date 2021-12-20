@@ -1,4 +1,6 @@
 # Altered by lesley-byte for the people who have the "Merry Christmas here's a keyboard" kit.  Do not attempt to use this code at this time.  Incomplete.
+# The first part of this code imports modules that are used later.
+# You will not need to change the imported modules.
 import os
 import time
 import board
@@ -10,8 +12,8 @@ from adafruit_hid.consumer_control import ConsumerControl
 from adafruit_hid.consumer_control_code import ConsumerControlCode
 from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
 
-# -----------------------------------------------------------------------------------------------
-
+# --------------------*This section is where you define the key presses*---------------------------------------------------------------------------
+#---------------------You can change things here but you have to follow rules----------------------------------------------------------------------
 # print a string on keypress:
 key_output1 = "Hello World! \n"
 # one character on keypress:
