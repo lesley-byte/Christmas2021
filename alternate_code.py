@@ -17,7 +17,6 @@ led.value = True
 time.sleep(1)  # Sleep for a bit to avoid a race condition on some systems
 keyboard = Keyboard(usb_hid.devices)
 keyboard_layout = KeyboardLayoutUS(keyboard)  # We're in the US :)
-# create the switch, add a pullup, start it with not being pressed
 pins = [
     board.GP0,  # This should look familiar. Its on the board...to make it easier to alter.
     board.GP1,
@@ -39,16 +38,11 @@ for i in range(10):
     buttons[i].pull = Pull.UP
     
 buttons_state = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-# button = DigitalInOut(board.GP0)
-# button.switch_to_input(pull=Pull.UP)
 keeby = 0
-
 f1 = open("/macros/button_GP0.txt", "rt")
 print(f1.read())
-keeby = (f1.read())
-print(keeby)
 # print a string on keypress
-key_output1 = keeby # "Hello World!\n"
+key_output1 = "Hello World!\n"
 # one character on keypress
 key_output2 = Keycode.A
 # multiple simultaneous keypresses
