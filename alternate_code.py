@@ -30,13 +30,11 @@ pins = [
     board.GP14
 ]
 buttons = [0, 1, 2, 3, 4, 5, 6,
-            7, 8, 9]
-            
+            7, 8, 9]            
 for i in range(10):
     buttons[i] = DigitalInOut(pins[i])
     buttons[i].direction = Direction.INPUT
-    buttons[i].pull = Pull.UP
-    
+    buttons[i].pull = Pull.UP    
 buttons_state = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 keeby = 0
 f1 = open("/macros/button_GP0.txt", "rt")
@@ -61,7 +59,6 @@ key_output5 = (
    {'keys': Keycode.F, 'delay': 0.1},  # open font submenu
    {'keys': "\t\t100\n", 'delay': 0.1},  # tab over to font size, enter 100
 )
-
 key_output = key_output1
 # our helper function will press the keys themselves
 def make_keystrokes(keys, delay):
@@ -74,20 +71,16 @@ def make_keystrokes(keys, delay):
         keyboard.press(*keys)  # "Press"...
         keyboard.release_all()  # ..."Release"!
     time.sleep(delay)
-
 while True:
     for button in range(10):
         if buttons[button].value and not buttons_state[button]:
             # print("Button pressed.")
             buttons_state[button] = True
-
         if not buttons[button].value and buttons_state[button]:
             print("Button released.")
             print(pins[button])
             if pins[button] == board.GP0:
-                
                 key_output = key_output1
-                
                 pass
             elif pins[button] == board.GP1:
                 key_output = key_output2
@@ -98,7 +91,6 @@ while True:
             elif pins[button] == board.GP5:
                 key_output = key_output5
                 pass
-            
             if isinstance(key_output, (list, tuple)) and isinstance(key_output[0], dict):
                 for k in key_output:
                     make_keystrokes(k['keys'], k['delay'])
