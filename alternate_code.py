@@ -10,6 +10,31 @@ from adafruit_hid.consumer_control import ConsumerControl
 from adafruit_hid.consumer_control_code import ConsumerControlCode
 from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
 
+# -----------------------------------------------------------------------------------------------
+
+# print a string on keypress:
+key_output1 = "Hello World! \n"
+# one character on keypress:
+key_output2 = Keycode.A
+# multiple simultaneous keypresses:
+key_output3 = (Keycode.SHIFT, Keycode.A)  # capital A
+key_output4 = (Keycode.CONTROL, Keycode.ALT, Keycode.DELETE)  # three finger salute!
+# complex commands! we make a list of dictionary entries for each command
+# each line has 'keys' which is either a single key, a list of keys, or a string
+# then the 'delay' is in seconds, since we often need to give the computer a minute
+# before doing something!
+# this will open up a notepad in windows, and ducky the user:
+key_output5 = (
+   {'keys': Keycode.GUI, 'delay': 0.1},
+   {'keys': "notepad\n", 'delay': 1},  # give it a moment to launch!
+   {'keys': "YOU HAVE BEEN DUCKIED!", 'delay': 0.1},
+   {'keys': (Keycode.ALT, Keycode.O), 'delay': 0.1},  # open format menu
+   {'keys': Keycode.F, 'delay': 0.1},  # open font submenu
+   {'keys': "\t\t100\n", 'delay': 0.1},  # tab over to font size, enter 100
+)
+
+# -----------------** Don't touch anything below this line unless you know what you are doing **------------------------------------------------------------------------------
+
 print("Christmas pico keyboard")
 led = DigitalInOut(board.LED)
 led.direction = Direction.OUTPUT
@@ -37,30 +62,6 @@ for i in range(10):
     buttons[i].pull = Pull.UP    
 buttons_state = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
-# -----------------------------------------------------------------------------------------------
-
-# print a string on keypress
-key_output1 = "Hello World! \n"
-# one character on keypress
-key_output2 = Keycode.A
-# multiple simultaneous keypresses
-key_output3 = (Keycode.SHIFT, Keycode.A)  # capital A
-key_output4 = (Keycode.CONTROL, Keycode.ALT, Keycode.DELETE)  # three finger salute!
-# complex commands! we make a list of dictionary entries for each command
-# each line has 'keys' which is either a single key, a list of keys, or a string
-# then the 'delay' is in seconds, since we often need to give the computer a minute
-# before doing something!
-# this will open up a notepad in windows, and ducky the user
-key_output5 = (
-   {'keys': Keycode.GUI, 'delay': 0.1},
-   {'keys': "notepad\n", 'delay': 1},  # give it a moment to launch!
-   {'keys': "YOU HAVE BEEN DUCKIED!", 'delay': 0.1},
-   {'keys': (Keycode.ALT, Keycode.O), 'delay': 0.1},  # open format menu
-   {'keys': Keycode.F, 'delay': 0.1},  # open font submenu
-   {'keys': "\t\t100\n", 'delay': 0.1},  # tab over to font size, enter 100
-)
-
-# -----------------------------------------------------------------------------------------------
 key_output = key_output1
 # our helper function will press the keys themselves
 def make_keystrokes(keys, delay):
@@ -73,6 +74,7 @@ def make_keystrokes(keys, delay):
         keyboard.press(*keys)  # "Press"...
         keyboard.release_all()  # ..."Release"!
     time.sleep(delay)
+    
 while True:
     for button in range(10):
         if buttons[button].value and not buttons_state[button]:
@@ -91,7 +93,7 @@ while True:
                 key_output = key_output3
                 pass
             elif pins[button] == board.GP5:
-                key_output = key_output5
+                key_output = key_output4
                 pass
             if isinstance(key_output, (list, tuple)) and isinstance(key_output[0], dict):
                 for k in key_output:
