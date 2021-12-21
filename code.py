@@ -13,9 +13,9 @@ from adafruit_hid.keycode import Keycode
 from adafruit_hid.consumer_control import ConsumerControl
 from adafruit_hid.consumer_control_code import ConsumerControlCode
 from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
-
+# -------------------------------------------------------------------------------------------------------------------------------------------------
 # --------------------*THIS section is where you define the key presses*---------------------------------------------------------------------------
-#---------------------You can change things here but you have to FOLLOW rules and KEEP formatting.----------------------------------------------------------------------
+#---------------------You can change things here but you have to FOLLOW rules and KEEP the formatting.-------------------------------------------------
 # print a string on keypress:
 key_output1 = "Hello World! \n"
 # one character on keypress:
