@@ -14,7 +14,7 @@ Your kit should include:
 
 The Raspberry Pi Pico has firmware.  I gave you a fresh one with some example code. This is an adventure. *Buckle up!* The example code uses CircuitPython but if you want to you can use something else.  Its up to you.  Alternatively, i will give you a raw pico without firmware at your request.
 
-# See the Wiki for help in customization:  
+# See the Wiki for help in customization:  https://github.com/lesley-byte/Christmas2021/wiki
 
 # Should you desire to program a raw pico with firmware and code the following instructions may help. Otherwise they serve as assistance if your pico needs to be nuked and re-flashed/re-coded:  (the following is for programming a fresh/new pico or a pico that has been "nuked" clean)
 
