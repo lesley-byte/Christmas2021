@@ -1,4 +1,6 @@
 # Altered by lesley-byte for the people who have the "Merry Christmas here's a keyboard" kit.  Do not attempt to use this code at this time.  Incomplete.
+
+# -------------------------------------------**import section** Probably don't change this unless you understand it.---------------
 # The first part of this code imports modules that are used later.
 # You will not need to change the imported modules.
 import os
@@ -37,15 +39,19 @@ key_output5 = (
 
 # -----------------** Don't touch anything below this line unless you know what you are doing **------------------------------------------------------------------------------
 
-print("Christmas pico keyboard")
+print("Christmas pico keyboard")  # This prints on the repl line.  It doesn't affect what happens when a button is pressed.
+
+# -------led section--------  This section tells the light on the pico to stay on when the code is working ------------
 led = DigitalInOut(board.LED)
 led.direction = Direction.OUTPUT
 led.value = True
+
+#--------a bunch of things defined.  otherwise the pico doesn't know what it all means----------------
 time.sleep(1)  # Sleep for a bit to avoid a race condition on some systems
 keyboard = Keyboard(usb_hid.devices)
 keyboard_layout = KeyboardLayoutUS(keyboard)  # We're in the US :)
-pins = [
-    board.GP0,  # This should look familiar. Its on the board...to make it easier to alter.
+pins = [   # This should look familiar. These are the addresses for the pins that are attached to the buttons:
+    board.GP0, 
     board.GP1,
     board.GP4,
     board.GP5,
@@ -56,16 +62,18 @@ pins = [
     board.GP12,
     board.GP14
 ]
-buttons = [0, 1, 2, 3, 4, 5, 6,
+buttons = [0, 1, 2, 3, 4, 5, 6,  # This assigns numbers to the buttons to make them easier to deal with
             7, 8, 9]            
-for i in range(10):
+for i in range(10):  #  This part tells the system how to read the pins
     buttons[i] = DigitalInOut(pins[i])
     buttons[i].direction = Direction.INPUT
     buttons[i].pull = Pull.UP    
-buttons_state = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      
+buttons_state = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]  # This part gives a starting value to the buttons/pins
 
-key_output = key_output1
+key_output = key_output1  # This is a starting value for key_output, it will change.
 # our helper function will press the keys themselves
+
 def make_keystrokes(keys, delay):
     if isinstance(keys, str):  # If it's a string...
         keyboard_layout.write(keys)  # ...Print the string
