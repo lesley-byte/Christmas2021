@@ -60,7 +60,7 @@ pins = [   # This should look familiar. These are the addresses for the pins tha
     board.GP9, board.GP10,
     board.GP12, board.GP14
 ]
-buttons = [   # This assigns numbers to the buttons to make them easier to deal with
+buttons = [   # This creates a list of buttons
    0, 1, 
    2, 3, 
    4, 5, 
