@@ -77,7 +77,7 @@ buttons_state = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]  # This part gives a starting val
 key_output = key_output1  # This is a starting value for key_output, it will change.
 # our helper function will press the keys themselves
 
-def make_keystrokes(keys, delay):
+def make_keystrokes(keys, delay): # This defines the helper function that presses or writes the keys. 
     if isinstance(keys, str):  # If it's a string...
         keyboard_layout.write(keys)  # ...Print the string
     elif isinstance(keys, int):  # If its a single key
@@ -110,7 +110,7 @@ while True:  # Main loop...the stuff that does stuff...without this nothing happ
                 pass
             if isinstance(key_output, (list, tuple)) and isinstance(key_output[0], dict):  # tells it how to use make_keystrokes for complex combos
                 for k in key_output:
-                    make_keystrokes(k['keys'], k['delay'])
+                    make_keystrokes(k['keys'], k['delay'])  # This makes use of the make_keystrokes function for complex combos
             else:
                 make_keystrokes(key_output, delay=0)  # tells it how to use make_keystrokes for everything else
             buttons_state[button] = False  # shifts value of that specific button back
