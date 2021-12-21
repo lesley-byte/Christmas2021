@@ -69,7 +69,7 @@ buttons = [0, 1, 2, 3, 4, 5, 6,  # This assigns numbers to the buttons to make t
 for i in range(10):  #  This part tells the system how to read the pins
     buttons[i] = DigitalInOut(pins[i])
     buttons[i].direction = Direction.INPUT
-    buttons[i].pull = Pull.UP    
+    buttons[i].pull = Pull.UP # Not every microcontroller uses Pull.UP, some use PULL.DOWN. If using this code with board that is not a pico pay attention to this.
       
 buttons_state = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]  # This part gives a starting value to the buttons/pins
 
