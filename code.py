@@ -16,7 +16,7 @@ from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 # --------------------*THIS section is where you define the key presses*---------------------------------------------------------------------------
 #---------------------You can change things here but you have to FOLLOW rules and KEEP the formatting.-------------------------------------------------
-# print a string on keypress:
+# type out a string on keypress:
 key_output1 = "Hello World! \n"
 # one character on keypress:
 key_output2 = Keycode.A
