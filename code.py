@@ -40,17 +40,15 @@ key_output5 = (
 # -----------------** Don't touch anything below this line unless you know what you are doing **------------------------------------------------------------------------------
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 print("Christmas pico keyboard")  # This prints on the repl line.  It doesn't affect what happens when a button is pressed.
-
 # -------led section--------  This section tells the light on the pico to stay on when the code is working ------------
-led = DigitalInOut(board.LED)  # board.LED is the address of the LED on the pico
-led.direction = Direction.OUTPUT
+led = DigitalInOut(board.LED)  # board.LED is the address of the LED on the pico, tells pico where the led is
+led.direction = Direction.OUTPUT # tells the pico how to "talk" to the led 
 led.value = True  # keeps the LED on.  if you don't like it then change True to False
 
 #--------a bunch of things defined.  otherwise the pico doesn't know what it all means----------------
-time.sleep(1)  # Sleep for a bit to avoid a race condition on some systems
-keyboard = Keyboard(usb_hid.devices)
+time.sleep(1)  # Sleep for a bit to avoid a race condition on some systems * important
+keyboard = Keyboard(usb_hid.devices) # important
 keyboard_layout = KeyboardLayoutUS(keyboard)  # We're in the US :)
 pins = [   # This should look familiar. These are the addresses for the pins that are attached to the buttons:
     board.GP0, 
