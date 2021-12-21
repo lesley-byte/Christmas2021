@@ -1,6 +1,6 @@
 # Altered by lesley-byte for the people who have the "Merry Christmas here's a keyboard" kit.  Do not attempt to use this code at this time.  Incomplete.
 
-# -------------------------------------------**import section** Probably don't change this unless you understand it.---------------
+# ------------**import section** Probably don't change this unless you understand it. GO TO NEXT SECTION---------------
 # The first part of this code imports modules that are used later.
 # You will not need to change the imported modules.
 import os
@@ -14,8 +14,8 @@ from adafruit_hid.consumer_control import ConsumerControl
 from adafruit_hid.consumer_control_code import ConsumerControlCode
 from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
 
-# --------------------*This section is where you define the key presses*---------------------------------------------------------------------------
-#---------------------You can change things here but you have to follow rules----------------------------------------------------------------------
+# --------------------*THIS section is where you define the key presses*---------------------------------------------------------------------------
+#---------------------You can change things here but you have to FOLLOW rules and KEEP formatting.----------------------------------------------------------------------
 # print a string on keypress:
 key_output1 = "Hello World! \n"
 # one character on keypress:
@@ -38,6 +38,8 @@ key_output5 = (
 )
 
 # -----------------** Don't touch anything below this line unless you know what you are doing **------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 print("Christmas pico keyboard")  # This prints on the repl line.  It doesn't affect what happens when a button is pressed.
 
@@ -85,32 +87,31 @@ def make_keystrokes(keys, delay):
         keyboard.release_all()  # ..."Release"!
     time.sleep(delay)
     
-while True:
+while True:  # Main loop...the stuff that does stuff...without this nothing happens at all
     for button in range(10):
-        if buttons[button].value and not buttons_state[button]:
-            # print("Button pressed.")
-            buttons_state[button] = True
-        if not buttons[button].value and buttons_state[button]:
-            print("Button released.")
-            print(pins[button])
-            if pins[button] == board.GP0:
-                key_output = key_output1
+        if buttons[button].value and not buttons_state[button]:  # if specific button in list of buttons is pressed *not debounced*
+            # print("Button pressed.")  
+            buttons_state[button] = True  # Shift value of that specific button 
+        if not buttons[button].value and buttons_state[button]:  # If specific button in the list of buttons is released
+            print("Button released.") # repl feedback
+            print(pins[button])  # repl feedback
+            if pins[button] == board.GP0:  # If GP0 is pressed then
+                key_output = key_output1  # thing to be typed is in key_output1
                 pass
-            elif pins[button] == board.GP1:
-                key_output = key_output2
+            elif pins[button] == board.GP1:  # If GP1 is pressed then
+                key_output = key_output2  # thing to be typed is in key_output2
                 pass
-            elif pins[button] == board.GP4:
-                key_output = key_output3
+            elif pins[button] == board.GP4:  # If GP4 is pressed then
+                key_output = key_output3  # thing to be typed is in key_output3
                 pass
-            elif pins[button] == board.GP5:
-                key_output = key_output4
+            elif pins[button] == board.GP5:  # If GP5 is pressed then
+                key_output = key_output4  # thing to be typed is in key_output4
                 pass
-            if isinstance(key_output, (list, tuple)) and isinstance(key_output[0], dict):
+            if isinstance(key_output, (list, tuple)) and isinstance(key_output[0], dict):  # tells it how to use make_keystrokes for complex combos
                 for k in key_output:
                     make_keystrokes(k['keys'], k['delay'])
             else:
-                make_keystrokes(key_output, delay=0)
-                print("nothing happening")
-            buttons_state[button] = False
+                make_keystrokes(key_output, delay=0)  # tells it how to use make_keystrokes for everything else
+            buttons_state[button] = False  # shifts value of that specific button back
 
  
