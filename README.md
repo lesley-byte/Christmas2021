@@ -16,6 +16,9 @@ The Raspberry Pi Pico has firmware.  I gave you a fresh one with some example co
 
 # See the Wiki for help in customization:  https://github.com/lesley-byte/Christmas2021/wiki
 
+See https://www.raspberrypi.com/documentation/microcontrollers/raspberry-pi-pico.html#software-development for directions how to "Reset the Flash Memory" or nuke it. 
+You almost can't kill these things.  Even if you accedentally deleted everything...it can often be repaired. Just reset the flash memory.  See the wiki for more help.
+
 # Should you desire to program a raw pico with firmware and code the following instructions may help. Otherwise they serve as assistance if your pico needs to be nuked and re-flashed/re-coded:  (the following is for programming a fresh/new pico or a pico that has been "nuked" clean)
 
 1. Familiarize yourself with the Pico.  There's a great introduction on the adafruit website at: https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython  ![image](https://user-images.githubusercontent.com/60296103/145462037-aeacaa23-bd2e-4a99-81da-0be189f1a5a9.png)
