@@ -44,9 +44,9 @@ key_output5 = (
 print("Christmas pico keyboard")  # This prints on the repl line.  It doesn't affect what happens when a button is pressed.
 
 # -------led section--------  This section tells the light on the pico to stay on when the code is working ------------
-led = DigitalInOut(board.LED)
+led = DigitalInOut(board.LED)  # board.LED is the address of the LED on the pico
 led.direction = Direction.OUTPUT
-led.value = True
+led.value = True  # keeps the LED on.  if you don't like it then change True to False
 
 #--------a bunch of things defined.  otherwise the pico doesn't know what it all means----------------
 time.sleep(1)  # Sleep for a bit to avoid a race condition on some systems
