@@ -5,8 +5,7 @@ Your kit should include:
 1. "Merry Christmas here's a keyboard" green pcb. (See images below)
 2. A small usb cable
 
-![image](https://user-images.githubusercontent.com/60296103/145315846-69aa06cc-9ada-4acf-b107-ad9da7a73005.png)
-![image](https://user-images.githubusercontent.com/60296103/145315960-891df17c-c62c-4927-922e-38e7cc167c39.png)
+![image](https://user-images.githubusercontent.com/60296103/145315846-69aa06cc-9ada-4acf-b107-ad9da7a73005.png) ![image](https://user-images.githubusercontent.com/60296103/145315960-891df17c-c62c-4927-922e-38e7cc167c39.png)
 ![image](https://user-images.githubusercontent.com/60296103/146941706-f670458c-40d7-4344-a69b-623a1a761fc5.png)
 
 
