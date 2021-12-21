@@ -1,4 +1,7 @@
-# Altered by lesley-byte for the people who have the "Merry Christmas here's a keyboard" kit.  Do not attempt to use this code at this time.  Incomplete.
+# Altered by lesley-byte for the people who have the "Merry Christmas here's a keyboard" kit.  
+
+# The adafruit_hid library MUST be in the lib folder. I have already done this but if you are creating a fresh one, you need to remember to do this.
+# all other imported things are "built in"
 
 # ------------**import section** Probably don't change this unless you understand it. GO TO NEXT SECTION---------------
 # The first part of this code imports modules that are used later.
@@ -8,7 +11,7 @@ import time
 import board
 from digitalio import DigitalInOut, Direction, Pull
 import usb_hid
-from adafruit_hid.keyboard import Keyboard
+from adafruit_hid.keyboard import Keyboard # The adafruit_hid library MUST be in the lib folder on the pico for this to work.  I have already put it there if I set it up.
 from adafruit_hid.keycode import Keycode
 from adafruit_hid.consumer_control import ConsumerControl
 from adafruit_hid.consumer_control_code import ConsumerControlCode
