@@ -54,19 +54,19 @@ time.sleep(1)  # Sleep for a bit to avoid a race condition on some systems * imp
 keyboard = Keyboard(usb_hid.devices) # important
 keyboard_layout = KeyboardLayoutUS(keyboard)  # We're in the US :)
 pins = [   # This should look familiar. These are the addresses for the pins that are attached to the buttons:
-    board.GP0, 
-    board.GP1,
-    board.GP4,
-    board.GP5,
-    board.GP6,
-    board.GP7,
-    board.GP9,
-    board.GP10,
-    board.GP12,
-    board.GP14
+    board.GP0, board.GP1,  # Placed in this layout so its easier to picture where the buttons are on the board.
+    board.GP4, board.GP5,
+    board.GP6, board.GP7,
+    board.GP9, board.GP10,
+    board.GP12, board.GP14
 ]
-buttons = [0, 1, 2, 3, 4, 5, 6,  # This assigns numbers to the buttons to make them easier to deal with
-            7, 8, 9]            
+buttons = [   # This assigns numbers to the buttons to make them easier to deal with
+   0, 1, 
+   2, 3, 
+   4, 5, 
+   6, 7, 
+   8, 9
+]            
 for i in range(10):  #  This part tells the system how to read the pins
     buttons[i] = DigitalInOut(pins[i]) # Defines the pins as buttons to make it easier to deal with them
     buttons[i].direction = Direction.INPUT # tells the pico how to "talk" to the buttons
