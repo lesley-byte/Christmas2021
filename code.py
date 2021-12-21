@@ -18,9 +18,9 @@ from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
 #---------------------You can change things here but you have to FOLLOW rules and KEEP the formatting.-------------------------------------------------
 # type out a string on keypress:
 key_output1 = "Hello World! \n"
-# one character on keypress:
+# type one character on keypress:
 key_output2 = Keycode.A
-# multiple simultaneous keypresses:
+# type simple multiple simultaneous keypresses:
 key_output3 = (Keycode.SHIFT, Keycode.A)  # capital A
 key_output4 = (Keycode.CONTROL, Keycode.ALT, Keycode.DELETE)  # three finger salute!
 # complex commands! we make a list of dictionary entries for each command
