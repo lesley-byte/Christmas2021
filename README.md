@@ -64,5 +64,5 @@ but stop at the code page.  And don't worry about 3d printing.  We aren't doing 
 # Ask me if you need help.  
 
 I will actually set it up for you if you want but am offering it as an adventure first.  This way you can learn to do this with any pico... and even on a breadboard with different button layouts.
-![image](https://user-images.githubusercontent.com/60296103/146859131-606cbda6-dd16-49f6-921c-d8c47cb35926.png)
+
 
