@@ -65,4 +65,5 @@ but stop at the code page.  And don't worry about 3d printing.  We aren't doing 
 
 I will actually set it up for you if you want but am offering it as an adventure first.  This way you can learn to do this with any pico... and even on a breadboard with different button layouts.
 
-
+# Please do the right thing
+* https://github.com/lesley-byte/Christmas2021/wiki/Please-do-the-right-thing
