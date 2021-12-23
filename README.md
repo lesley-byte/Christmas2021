@@ -11,7 +11,9 @@ Your kit should include:
 
 
 # *Quick Start* https://github.com/lesley-byte/Christmas2021/wiki/Quick-Start
-## go to https://github.com/lesley-byte/Christmas2021/wiki 
+
+
+## For home page of wiki go to https://github.com/lesley-byte/Christmas2021/wiki 
 
 
 The Raspberry Pi Pico has firmware.  I gave you a fresh one with some example code. This is an adventure. *Buckle up!* The example code uses CircuitPython but if you want to you can use something else.  Its up to you.  Alternatively, i will give you a raw pico without firmware at your request.
