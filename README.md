@@ -1,8 +1,8 @@
 # Christmas 2021 Keyboard
-If you know, then you know. 🎄
+A creative Microcontroller adventure!!! 🎄
 
 Your kit should include:
-1. "Merry Christmas here's a keyboard" green pcb. (See images below)
+1. "Merry Christmas here's a keyboard" green pcb. With attached pico.(See images below)
 2. A small usb cable
 3. Maybe some optional rubber feet for it.  IDK
 
