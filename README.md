@@ -10,7 +10,7 @@ Your kit should include:
 ![image](https://user-images.githubusercontent.com/60296103/146941706-f670458c-40d7-4344-a69b-623a1a761fc5.png)
 
 
-# *Start* 
+# *Quick Start* https://github.com/lesley-byte/Christmas2021/wiki/Quick-Start
 ## go to https://github.com/lesley-byte/Christmas2021/wiki 
 
 
