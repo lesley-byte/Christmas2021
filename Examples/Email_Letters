@@ -33,8 +33,14 @@ Listen to your 3rd Great Uncle twice removed and do not cover your christmas ham
 Love,
 Your Name
 """
-key_output5 = "I appreciate you.\n"
-key_output6 = "Thank you for being you \n"
+key_output5 = """
+Fondly,
+Your Name
+"""
+key_output6 = """
+Sincerely,
+Your Name
+"""
 key_output7 = "Merry Christmas \n"
 key_output8 = "2021 \n"
 key_output9 = "Stay tuned for more inventions \n"
