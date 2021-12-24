@@ -27,8 +27,22 @@ key_output1 =  (
    {'keys': "01/01/01", 'delay': 0.1},  
    {'keys': Keycode.ENTER, 'delay': 0.1},  # tab over to font size, enter 100
 )
-key_output2 = "You are invited to an adventure \n"
-key_output3 = "This is your Macropad/keyboard and it can type out whatever you want \n"
+key_output2 = (
+   {'keys': "Male/Female", 'delay': 0.1},
+   {'keys': Keycode.TAB, 'delay': 0.1},  # give it a moment. the length of delay may need to be changed.
+   {'keys': "Address", 'delay': 0.1},
+   {'keys': Keycode.TAB, 'delay': 0.1},  # give it a moment. the length of delay may need to be changed.
+   {'keys': "Town", 'delay': 0.1},  
+   {'keys': Keycode.ENTER, 'delay': 0.1},  # tab over to font size, enter 100
+)
+key_output3 = (
+   {'keys': "Meaning of life", 'delay': 0.1},
+   {'keys': Keycode.TAB, 'delay': 0.1},  # give it a moment. the length of delay may need to be changed.
+   {'keys': "2nd Cousin's Mother's Maiden name", 'delay': 0.1},
+   {'keys': Keycode.TAB, 'delay': 0.1},  # give it a moment. the length of delay may need to be changed.
+   {'keys': "Favorite food", 'delay': 0.1},  
+   {'keys': Keycode.ENTER, 'delay': 0.1},  # tab over to font size, enter 100
+)
 key_output4 = "Go to https://github.com/lesley-byte/Christmas2021/wiki for help with customization \n"
 key_output5 = "I appreciate you.\n"
 key_output6 = "Thank you for being you \n"
