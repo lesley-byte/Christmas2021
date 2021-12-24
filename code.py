@@ -102,22 +102,22 @@ while True:  # Main loop...the stuff that does stuff...without this nothing happ
                 key_output = key_output4  # thing to be typed is in key_output4
                 pass
             elif pins[button] == board.GP6:  # If GP5 is pressed then
-                key_output = key_output5  # thing to be typed is in key_output4
+                key_output = key_output5  # thing to be typed is in key_output5
                 pass
             elif pins[button] == board.GP7:  # If GP5 is pressed then
-                key_output = key_output6  # thing to be typed is in key_output4
+                key_output = key_output6  # thing to be typed is in key_output6
                 pass
             elif pins[button] == board.GP9:  # If GP5 is pressed then
-                key_output = key_output7  # thing to be typed is in key_output4
+                key_output = key_output7  # thing to be typed is in key_output7
                 pass
             elif pins[button] == board.GP10:  # If GP5 is pressed then
-                key_output = key_output8  # thing to be typed is in key_output4
+                key_output = key_output8  # thing to be typed is in key_output8
                 pass
             elif pins[button] == board.GP12:  # If GP5 is pressed then
-                key_output = key_output9  # thing to be typed is in key_output4
+                key_output = key_output9  # thing to be typed is in key_output9
                 pass
             elif pins[button] == board.GP14:  # If GP5 is pressed then
-                key_output = key_output10  # thing to be typed is in key_output4
+                key_output = key_output10  # thing to be typed is in key_output10
                 pass
             if isinstance(key_output, (list, tuple)) and isinstance(key_output[0], dict):  # tells it how to use make_keystrokes for complex combos
                 for k in key_output:
