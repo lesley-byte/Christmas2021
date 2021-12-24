@@ -25,8 +25,9 @@ key_output3 = "The mill's closed. There's no more work. We're destitute. I've go
 key_output4 = "Well, he's...he's, ah...probably pining for the fjords. \n"
 key_output5 = "Its just a flesh wound \n"
 key_output6 = "What is the air-speed velocity of an unladen swallow? \n"
-key_output7 = "Merry Christmas \n"
-key_output8 = "2021 \n"
+key_output7 = "Nobody expects the Spanish Inquisition! Our chief weapon is surprise! \n"
+key_output8 = """What did he say? 
+I think it was, "blessed are the cheesemakers". """
 key_output9 = "Stay tuned for more inventions \n"
 key_output10 = """ 
 yours truly,
