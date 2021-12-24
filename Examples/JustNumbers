@@ -19,16 +19,16 @@ from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 # --------------------*THIS section is where you define the key presses*---------------------------------------------------------------------------
 #---------------------You can change things here but you have to FOLLOW rules and KEEP the formatting.-------------------------------------------------
-key_output1 = Keycode.A
-key_output2 = Keycode.B
-key_output3 = Keycode.C
-key_output4 = Keycode.D
-key_output5 = Keycode.E
-key_output6 = Keycode.F
-key_output7 = Keycode.G
-key_output8 = Keycode.H
-key_output9 = Keycode.I
-key_output10 = Keycode.J
+key_output1 = Keycode.ONE
+key_output2 = Keycode.TWO
+key_output3 = Keycode.THREE
+key_output4 = Keycode.FOUR
+key_output5 = Keycode.FIVE
+key_output6 = Keycode.SIX
+key_output7 = Keycode.SEVEN
+key_output8 = Keycode.EIGHT
+key_output9 = Keycode.NINE
+key_output10 = Keycode.ZERO
 
 # -----------------** Don't touch anything below this line unless you know what you are doing **------------------------------------------------------------------------------
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
