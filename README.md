@@ -1,5 +1,5 @@
 # Christmas 2021 Keyboard
-A creative Microcontroller adventure!!! 🎄
+A creative Microcontroller adventure!!! For my family and close friends.🎄
 
 Your kit should include:
 1. "Merry Christmas here's a keyboard" green pcb. With attached pico.(See images below)
@@ -16,7 +16,7 @@ Your kit should include:
 ## For home page of wiki go to https://github.com/lesley-byte/Christmas2021/wiki 
 
 
-The Raspberry Pi Pico has firmware.  I gave you a fresh one with some example code. This is an adventure. *Buckle up!* The example code uses CircuitPython but if you want to you can use something else.  Its up to you.  Alternatively, i will give you a raw pico without firmware at your request.
+The Raspberry Pi Pico has firmware.  I gave you a fresh one with some example code. This is an adventure. *Buckle up!* The example code uses CircuitPython but if you want to you can use something else.  Its up to you.  Alternatively, i will give you a raw pico without firmware at your request.(If I know you...this offer doesn't extend to strangers or raccoons)
 
 # See the Wiki for help in customization:  https://github.com/lesley-byte/Christmas2021/wiki
 
