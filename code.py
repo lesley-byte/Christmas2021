@@ -19,18 +19,10 @@ from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 # --------------------*THIS section is where you define the key presses*---------------------------------------------------------------------------
 #---------------------You can change things here but you have to FOLLOW rules and KEEP the formatting.-------------------------------------------------
-# type out a string on keypress:
-key_output1 = "Hello World! \n"
-# type one character on keypress:
-key_output2 = Keycode.A
-# type simple multiple simultaneous keypresses:
-key_output3 = (Keycode.SHIFT, Keycode.A)  # capital A
-key_output4 = (Keycode.CONTROL, Keycode.ALT, Keycode.DELETE)  # three finger salute!
-# complex commands! we make a list of dictionary entries for each command
-# each line has 'keys' which is either a single key, a list of keys, or a string
-# then the 'delay' is in seconds, since we often need to give the computer a minute
-# before doing something!
-# this will open up a notepad in windows, and ducky the user:
+key_output1 = "Welcome to the 2021 Christmas pico keyboard \n"
+key_output2 = "You are invited to an adventure \n"
+key_output3 = "This is your Macropad/keyboard and it can type out whatever you want"
+key_output4 = (Keycode.CONTROL, Keycode.ALT, Keycode.DELETE)
 key_output5 = (
    {'keys': Keycode.GUI, 'delay': 0.1},
    {'keys': "notepad\n", 'delay': 1},  # give it a moment to launch!
