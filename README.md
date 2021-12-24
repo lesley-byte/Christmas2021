@@ -42,6 +42,7 @@ but stop at the code page.  And don't worry about 3d printing.  We aren't doing 
 
 
 - Download the Adafruit Hid library https://circuitpython.org/libraries  (you want the Bundle for Version 7.x)
+- Put the Adafruit Hid folder in your lib folder on the CIRCUITPY drive.
 ![image](https://user-images.githubusercontent.com/60296103/145462373-19e73bf8-e885-41ed-8cf6-77676866c4bb.png)
 
 ![image](https://user-images.githubusercontent.com/60296103/145464055-69cbdab9-dc2d-4dbe-bab0-681f149a0cbe.png)
