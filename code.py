@@ -21,16 +21,16 @@ from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
 #---------------------You can change things here but you have to FOLLOW rules and KEEP the formatting.-------------------------------------------------
 key_output1 = "Welcome to the 2021 Christmas pico keyboard \n"
 key_output2 = "You are invited to an adventure \n"
-key_output3 = "This is your Macropad/keyboard and it can type out whatever you want"
-key_output4 = "Go to https://github.com/lesley-byte/Christmas2021/wiki for help with customization"
-key_output5 = (
-   {'keys': Keycode.GUI, 'delay': 0.1},
-   {'keys': "notepad\n", 'delay': 1},  # give it a moment to launch!
-   {'keys': "YOU HAVE BEEN DUCKIED!", 'delay': 0.1},
-   {'keys': (Keycode.ALT, Keycode.O), 'delay': 0.1},  # open format menu
-   {'keys': Keycode.F, 'delay': 0.1},  # open font submenu
-   {'keys': "\t\t100\n", 'delay': 0.1},  # tab over to font size, enter 100
-)
+key_output3 = "This is your Macropad/keyboard and it can type out whatever you want \n"
+key_output4 = "Go to https://github.com/lesley-byte/Christmas2021/wiki for help with customization \n"
+key_output5 = "I appreciate you.\n"
+key_output6 = "Thank you for being you \n"
+key_output7 = "Merry Christmas \n"
+key_output8 = "2021 \n"
+key_output9 = "Stay tuned for more inventions"
+key_output10 = """ 
+yours truly,
+-Lesley"""
 
 # -----------------** Don't touch anything below this line unless you know what you are doing **------------------------------------------------------------------------------
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
