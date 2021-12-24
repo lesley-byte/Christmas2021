@@ -20,7 +20,7 @@ from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
 # --------------------*THIS section is where you define the key presses*---------------------------------------------------------------------------
 #---------------------You can change things here but you have to FOLLOW rules and KEEP the formatting.-------------------------------------------------
 key_output1 =  (
-   {'keys': "First Name, 'delay': 0.1},
+   {'keys': "First Name", 'delay': 0.1},
    {'keys': Keycode.TAB, 'delay': 0.1},  # give it a moment. the length of delay may need to be changed.
    {'keys': "Last Name", 'delay': 0.1},
    {'keys': Keycode.TAB, 'delay': 0.1},  # give it a moment. the length of delay may need to be changed.
