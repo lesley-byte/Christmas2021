@@ -22,7 +22,7 @@ from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
 key_output1 = "Welcome to the 2021 Christmas pico keyboard \n"
 key_output2 = "You are invited to an adventure \n"
 key_output3 = "This is your Macropad/keyboard and it can type out whatever you want"
-key_output4 = (Keycode.CONTROL, Keycode.ALT, Keycode.DELETE)
+key_output4 = "Go to https://github.com/lesley-byte/Christmas2021/wiki for help with customization"
 key_output5 = (
    {'keys': Keycode.GUI, 'delay': 0.1},
    {'keys': "notepad\n", 'delay': 1},  # give it a moment to launch!
