@@ -19,10 +19,20 @@ from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 # --------------------*THIS section is where you define the key presses*---------------------------------------------------------------------------
 #---------------------You can change things here but you have to FOLLOW rules and KEEP the formatting.-------------------------------------------------
-key_output1 = "Welcome to the 2021 Christmas pico keyboard \n"
-key_output2 = "You are invited to an adventure \n"
-key_output3 = "This is your Macropad/keyboard and it can type out whatever you want \n"
-key_output4 = "Go to https://github.com/lesley-byte/Christmas2021/wiki for help with customization \n"
+key_output1 = "email@email.com"
+key_output2 = """
+Dear ,
+It has come to my attention that you are in need of additional suppies for the confrence room.
+John has been notified and this matter will be resolved quickly.
+- Your Name
+"""
+key_output3 = "Dear \n I am sorry to hear of the loss of your pet hamster. \n Please accept my deep condolences at this time \n -Your Name"
+key_output4 = """
+My Dear Vanessa,
+Listen to your 3rd Great Uncle twice removed and do not cover your christmas ham in chocolate.
+Love,
+Your Name
+"""
 key_output5 = "I appreciate you.\n"
 key_output6 = "Thank you for being you \n"
 key_output7 = "Merry Christmas \n"
