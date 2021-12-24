@@ -27,10 +27,11 @@ key_output5 = "I appreciate you.\n"
 key_output6 = "Thank you for being you \n"
 key_output7 = "Merry Christmas \n"
 key_output8 = "2021 \n"
-key_output9 = "Stay tuned for more inventions"
+key_output9 = "Stay tuned for more inventions \n"
 key_output10 = """ 
 yours truly,
--Lesley"""
+-Lesley
+"""
 
 # -----------------** Don't touch anything below this line unless you know what you are doing **------------------------------------------------------------------------------
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
