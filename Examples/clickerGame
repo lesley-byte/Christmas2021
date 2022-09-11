@@ -27,7 +27,7 @@ key_output10 = ''
 # -----------------** Don't touch anything below this line unless you know what you are doing **------------------------------------------------------------------------------
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-print("NJM Macro keyboard")  # This prints on the repl line.  It doesn't affect what happens when a button is pressed.
+print("Cookie Clicker")  # This prints on the repl line.  It doesn't affect what happens when a button is pressed.
 # -------led section--------  This section tells the light on the pico to stay on when the code is working ------------
 led = DigitalInOut(board.LED)  # board.LED is the address of the LED on the pico, tells pico where the led is
 led.direction = Direction.OUTPUT # tells the pico how to "talk" to the led
@@ -83,7 +83,7 @@ while True:  # Main loop...the stuff that does stuff...without this nothing happ
             
             if pins[button] == board.GP0:  # If GP0 is pressed then
                 #key_output = key_output1  # thing to be typed is in key_output1
-                for mousey in range(1):  # CHANGE THE NUMBER FOR CLICKER GAMES
+                for mousey in range(100):  # CHANGE THE NUMBER FOR CLICKER GAMES
                     m.press(Mouse.LEFT_BUTTON) # click left mouse button!!!
                     m.release(Mouse.LEFT_BUTTON)
                 pass
