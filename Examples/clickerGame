@@ -15,22 +15,14 @@ m = Mouse(usb_hid.devices)
 #---------------------You can change things here but you have to FOLLOW rules and KEEP the formatting.-------------------------------------------------
 key_output1 = ''  # in this case the code for clicking the mouse is down below
 key_output2 = ''
-key_output3 = """Clicker game example  use first two buttons
-"""
-key_output4 = """Clicker game example  use first two buttons
-"""
-key_output5 = """Clicker game example  use first two buttons
-"""
-key_output6 = """Clicker game example  use first two buttons
-"""
-key_output7 = """Clicker game example  use first two buttons
-"""
-key_output8 = """Clicker game example  use first two buttons
-"""
-key_output9 = """Clicker game example  use first two buttons
-"""
-key_output10 = """Clicker game example  use first two buttons
-"""
+key_output3 = ''
+key_output4 =''
+key_output5 =''
+key_output6 = ''
+key_output7 = ''
+key_output8 = ''
+key_output9 = ''
+key_output10 = ''
 
 # -----------------** Don't touch anything below this line unless you know what you are doing **------------------------------------------------------------------------------
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -102,7 +94,10 @@ while True:  # Main loop...the stuff that does stuff...without this nothing happ
                     m.release(Mouse.RIGHT_BUTTON)
                 pass
             elif pins[button] == board.GP4:  # If GP4 is pressed then
-                key_output = key_output3  # thing to be typed is in key_output3
+                #key_output = key_output3  # thing to be typed is in key_output3
+                for mousey in range(2):  # CHANGE THE NUMBER FOR CLICKER GAMES
+                    m.press(Mouse.LEFT_BUTTON) # click left mouse button!!!
+                    m.release(Mouse.LEFT_BUTTON)
                 pass
             elif pins[button] == board.GP5:  # If GP5 is pressed then
                 key_output = key_output4  # thing to be typed is in key_output4
