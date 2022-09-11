@@ -80,8 +80,7 @@ while True:  # Main loop...the stuff that does stuff...without this nothing happ
         if not buttons[button].value and buttons_state[button]:  # If specific button in the list of buttons is released
             print("Button released.") # repl feedback
             print(pins[button])  # repl feedback
-   #----------------------------------------------------------------------------------------------------------------------------------
-   #------------------------------------------------see code below for handling mouse clicks------------------------------------------
+            
             if pins[button] == board.GP0:  # If GP0 is pressed then
                 #key_output = key_output1  # thing to be typed is in key_output1
                 for mousey in range(1):  # CHANGE THE NUMBER FOR CLICKER GAMES
@@ -91,35 +90,50 @@ while True:  # Main loop...the stuff that does stuff...without this nothing happ
             elif pins[button] == board.GP1:  # If GP1 is pressed then
                 #key_output = key_output2  # thing to be typed is in key_output2
                 for mousey in range(1): # CHANGE THE NUMBER FOR CLICKER GAMES
-                    m.press(Mouse.RIGHT_BUTTON) # click left mouse button!!!
+                    m.press(Mouse.RIGHT_BUTTON) # click right mouse button!!!
                     m.release(Mouse.RIGHT_BUTTON)
                 pass
             elif pins[button] == board.GP4:  # If GP4 is pressed then
                 #key_output = key_output3  # thing to be typed is in key_output3
                 for mousey in range(2):  # CHANGE THE NUMBER FOR CLICKER GAMES
-                    m.press(Mouse.LEFT_BUTTON) # click left mouse button!!!
+                    m.press(Mouse.LEFT_BUTTON) # double click left mouse button!!!
                     m.release(Mouse.LEFT_BUTTON)
                 pass
             elif pins[button] == board.GP5:  # If GP5 is pressed then
-                key_output = key_output4  # thing to be typed is in key_output4
+                #key_output = key_output4  # thing to be typed is in key_output4
+                for mousey in range(2):  # CHANGE THE NUMBER FOR CLICKER GAMES
+                    m.move(wheel=1)  # roll the mouse wheel
                 pass
             elif pins[button] == board.GP6:  # If GP5 is pressed then
-                key_output = key_output5  # thing to be typed is in key_output5
+                #key_output = key_output5  # thing to be typed is in key_output5
+                for mousey in range(2):  # CHANGE THE NUMBER FOR CLICKER GAMES
+                    m.move(wheel=-1)  # roll the mouse wheel
                 pass
             elif pins[button] == board.GP7:  # If GP5 is pressed then
-                key_output = key_output6  # thing to be typed is in key_output6
+                #key_output = key_output6  # thing to be typed is in key_output6
+                for mousey in range(2):  # CHANGE THE NUMBER FOR CLICKER GAMES
+                    m.move(wheel=10)  # roll the mouse wheel
                 pass
             elif pins[button] == board.GP9:  # If GP5 is pressed then
-                key_output = key_output7  # thing to be typed is in key_output7
+                #key_output = key_output7  # thing to be typed is in key_output7
+                for mousey in range(2):  # CHANGE THE NUMBER FOR CLICKER GAMES
+                    m.move(wheel=-10)  # roll the mouse wheel
                 pass
             elif pins[button] == board.GP10:  # If GP5 is pressed then
-                key_output = key_output8  # thing to be typed is in key_output8
+                #key_output = key_output8  # thing to be typed is in key_output8
+                for mousey in range(2):  # CHANGE THE NUMBER FOR CLICKER GAMES
+                    m.move(wheel=30)  # roll the mouse wheel
                 pass
             elif pins[button] == board.GP12:  # If GP5 is pressed then
-                key_output = key_output9  # thing to be typed is in key_output9
+                #key_output = key_output9  # thing to be typed is in key_output9
+                for mousey in range(2):  # CHANGE THE NUMBER FOR CLICKER GAMES
+                    m.move(wheel=-30)  # roll the mouse wheel
                 pass
             elif pins[button] == board.GP14:  # If GP5 is pressed then
-                key_output = key_output10  # thing to be typed is in key_output10
+                #key_output = key_output10  # thing to be typed is in key_output10
+                for mousey in range(1):  # CHANGE THE NUMBER FOR CLICKER GAMES
+                    m.press(Mouse.MIDDLE_BUTTON) # click middle mouse button!!!
+                    m.release(Mouse.MIDDLE_BUTTON)
                 pass
             if isinstance(key_output, (list, tuple)) and isinstance(key_output[0], dict):  # tells it how to use make_keystrokes for complex combos
                 for k in key_output:
