@@ -112,12 +112,12 @@ while True:  # Main loop...the stuff that does stuff...without this nothing happ
             elif pins[button] == board.GP7:  # If GP5 is pressed then
                 #key_output = key_output6  # thing to be typed is in key_output6
                 for mousey in range(2):  # CHANGE THE NUMBER FOR CLICKER GAMES
-                    m.move(wheel=10)  # roll the mouse wheel
+                    m.move(wheel=5)  # roll the mouse wheel
                 pass
             elif pins[button] == board.GP9:  # If GP5 is pressed then
                 #key_output = key_output7  # thing to be typed is in key_output7
                 for mousey in range(2):  # CHANGE THE NUMBER FOR CLICKER GAMES
-                    m.move(wheel=-10)  # roll the mouse wheel
+                    m.move(wheel=-5)  # roll the mouse wheel
                 pass
             elif pins[button] == board.GP10:  # If GP5 is pressed then
                 #key_output = key_output8  # thing to be typed is in key_output8
