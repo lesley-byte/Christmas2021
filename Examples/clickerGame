@@ -80,7 +80,8 @@ while True:  # Main loop...the stuff that does stuff...without this nothing happ
         if not buttons[button].value and buttons_state[button]:  # If specific button in the list of buttons is released
             print("Button released.") # repl feedback
             print(pins[button])  # repl feedback
-            
+   #----------------------------------------------------------------------------------------------------------------------------------
+   #------------------------------------------------see code below for handling mouse clicks------------------------------------------
             if pins[button] == board.GP0:  # If GP0 is pressed then
                 #key_output = key_output1  # thing to be typed is in key_output1
                 for mousey in range(1):  # CHANGE THE NUMBER FOR CLICKER GAMES
